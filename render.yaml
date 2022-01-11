@@ -4,6 +4,7 @@ services:
     env: ruby
     startCommand: rails s
     envVars:
+      - fromGroup: sentry
       - key: TEST_KEY
         sync: false
 
