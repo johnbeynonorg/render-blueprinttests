@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: env-var-test
+    envVars:
+      - key: TEST_KEY
+        sync: false
+
+envVarGroups:
+  - name: sentry
+    envVars:
+      - key: SENTRY_DSN
+        sync: false
+      - key: SENTRY_PROJECT
+        value: sampleapp
