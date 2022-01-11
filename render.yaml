@@ -4,14 +4,12 @@ services:
     env: ruby
     startCommand: rails s
     envVars:
-      - fromGroup: sentry
-      - key: TEST_KEY
+      - fromGroup: envvars
+      - key: PROMPT_FOR_THIS_IN_ENVVAR
         sync: false
 
 envVarGroups:
-  - name: sentry
+  - name: envvars
     envVars:
-      - key: SENTRY_DSN
+      - key: PROMPT_FOR_THIS_IN_ENVVAR_GROUP
         sync: false
-      - key: SENTRY_PROJECT
-        value: sampleapp
