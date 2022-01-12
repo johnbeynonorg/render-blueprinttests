@@ -2,15 +2,5 @@ services:
   - type: web
     name: env-var-test
     env: ruby
+    buildCommand: gem install rails && rails new
     startCommand: rails s
-    envVars:
-      - key: SENTRY_ENVIRONMENT
-        fromService:
-          type: web
-          envVarKey: RENDER_SERVICE_NAME
-          name: env-var-test
-      - key: SENTRY_RELEASE
-        fromService:
-          type: web
-          envVarKey: RENDER_GIT_COMMIT
-          name: env-var-test
