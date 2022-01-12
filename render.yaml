@@ -2,5 +2,5 @@ services:
   - type: web
     name: env-var-test
     env: ruby
-    buildCommand: bundle && rails new . && bundle install
-    startCommand: rails s
+    buildCommand: bundle
+    startCommand: bundle exec ruby app.rb
