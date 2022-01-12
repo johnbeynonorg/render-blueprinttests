@@ -8,9 +8,9 @@ services:
         fromService:
           type: web
           envVarKey: RENDER_SERVICE_NAME
-          name: sampleapp
+          name: env-var-test
       - key: SENTRY_RELEASE
         fromService:
           type: web
           envVarKey: RENDER_GIT_COMMIT
-          name: sampleapp
+          name: env-var-test
