@@ -3,4 +3,5 @@ services:
     name: env-var-test
     env: ruby
     buildCommand: ./render-build.sh
-    startCommand: bundle exec ruby app.rb
+    startCommand: ./render-start.sh
+     

@@ -2,7 +2,5 @@
 require 'sinatra'
 
 get '/' do
-  'Hello world!'
-
-	SENTRY_RELEASE: <%= ENV['SENTRY_RELEASE'] %>
+  "SENTRY_RELEASE: #{ENV['SENTRY_RELEASE']}"
 end
