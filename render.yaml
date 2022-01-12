@@ -4,12 +4,13 @@ services:
     env: ruby
     startCommand: rails s
     envVars:
-      - fromGroup: envvars
-      - key: PROMPT_FOR_THIS_IN_ENVVAR
-        sync: false
-
-envVarGroups:
-  - name: envvars
-    envVars:
-      - key: PROMPT_FOR_THIS_IN_ENVVAR_GROUP
-        sync: false
+      - key: SENTRY_ENVIRONMENT
+        fromService:
+          type: web
+          envVarKey: RENDER_SERVICE_NAME
+          name: sampleapp
+      - key: SENTRY_RELEASE
+        fromService:
+          type: web
+          envVarKey: RENDER_GIT_COMMIT
+          name: sampleapp
