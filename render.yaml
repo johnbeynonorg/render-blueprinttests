@@ -2,5 +2,5 @@ services:
   - type: web
     name: env-var-test
     env: ruby
-    buildCommand: bundle && rails new .
+    buildCommand: bundle && rails new . && bundle binstubs bundler --force
     startCommand: rails s
