@@ -1,16 +1,19 @@
 services:
   - type: web
+    name: env-var-source
+    env: ruby
+    startCommand: rails s
+    envVars: 
+      - key: SOME_KEY
+        value: SOME_VALUE
+
+  - type: web
     name: env-var-test
     env: ruby
     startCommand: rails s
     envVars:
-      - key: SENTRY_ENVIRONMENT
+      - key: SOME_KEY_FROM_OTHER_SOURCE
         fromService:
           type: web
-          envVarKey: RENDER_SERVICE_NAME
-          name: env-var-test
-      - key: SENTRY_RELEASE
-        fromService:
-          type: web
-          envVarKey: RENDER_GIT_COMMIT
-          name: env-var-test
+          envVarKey: SOME_KEY
+          name: env-var-source
