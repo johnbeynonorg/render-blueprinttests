@@ -2,5 +2,5 @@ services:
   - type: web
     name: env-var-test
     env: ruby
-    buildCommand: bundle
+    buildCommand: ./render-build.sh
     startCommand: bundle exec ruby app.rb
