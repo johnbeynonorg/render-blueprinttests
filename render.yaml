@@ -2,5 +2,5 @@ services:
   - type: web
     name: env-var-test
     env: ruby
-    buildCommand: gem install rails && rails new .
+    buildCommand: bundle && rails new .
     startCommand: rails s
