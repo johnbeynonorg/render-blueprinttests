@@ -7,6 +7,8 @@ services:
       - fromGroup: envvars
       - key: PROMPT_FOR_THIS_IN_ENVVAR
         sync: false
+      - key: ANOTHER_PROMPT_FOR_THIS_IN_ENVVAR
+        sync: false
 
 envVarGroups:
   - name: envvars
